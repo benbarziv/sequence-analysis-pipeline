@@ -1,0 +1,17 @@
+name: seq_pipeline
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.9
+  - snakemake
+  - biopython
+  - pyyaml
+  - pytest
+  - pandas
+  - fastqc
+  - bowtie2
+  - samtools
+  - trim-galore
+  - freebayes

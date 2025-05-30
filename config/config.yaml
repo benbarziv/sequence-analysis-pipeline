@@ -1,0 +1,7 @@
+# config/config.yaml
+
+samples:
+  - sample1
+  - sample2
+
+reference: "data/reference/genome.fa"
