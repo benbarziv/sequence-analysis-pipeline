@@ -1,6 +1,5 @@
 # Sequence Analysis Pipeline
 
-[![CI](https://github.com/benbarziv/sequence_analysis_pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/benbarziv/sequence_analysis_pipeline/actions/workflows/ci.yml)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 An end-to-end Snakemake workflow for DNA/RNA sequence analysis, from raw FASTQ to variant calls. This pipeline handles:
@@ -14,7 +13,7 @@ An end-to-end Snakemake workflow for DNA/RNA sequence analysis, from raw FASTQ t
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Features](#features)  
 2. [Project Structure](#project-structure)  
@@ -28,60 +27,10 @@ An end-to-end Snakemake workflow for DNA/RNA sequence analysis, from raw FASTQ t
 10. [Contributing](#contributing)  
 11. [License](#license)  
 
----
-
-## ✨ Features
-
-- **Reproducible**: single command to run entire pipeline  
-- **Modular**: each step defined as a Snakemake rule  
-- **Configurable**: sample list & reference path in `config/config.yaml`  
-- **Portable**: uses Python virtualenv & Homebrew-installed bio-tools  
-- **Tested**: unit tests for core functionality (pytest)  
-- **CI-ready**: GitHub Actions workflow for automated testing  
 
 ---
 
-## 📂 Project Structure
-
-```
-sequence_analysis_pipeline/
-├── config/
-│   └── config.yaml         # sample list & reference FASTA
-├── data/
-│   ├── sample1.fastq.gz    # drop your FASTQ(s) here
-│   └── reference/
-│       └── genome.fa       # reference genome
-├── results/                # pipeline outputs
-│   ├── qc/
-│   ├── trim/
-│   ├── align/
-│   └── variants/
-├── scripts/                # Python wrappers (optional)
-├── tests/                  # pytest tests
-├── Snakefile               # workflow definition
-├── requirements.txt        # pip dependencies
-├── environment.yml         # Conda environment (optional)
-├── .github/
-│   └── workflows/ci.yml    # CI pipeline
-└── README.md               # you are here!
-```
-
----
-
-## ⚙️ Prerequisites
-
-- **macOS** (or Linux)  
-- **Homebrew**  
-  ```bash
-  brew update
-  brew install bowtie2 samtools fastqc freebayes cutadapt snakemake graphviz
-  ```
-- **Python 3.9+**  
-- **Git**  
-
----
-
-## 🚀 Installation
+## Installation
 
 1. **Clone**  
    ```bash
@@ -95,15 +44,9 @@ sequence_analysis_pipeline/
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
-3. **(Optional) Conda**  
-   ```bash
-   conda env create -f environment.yml
-   conda activate seq_pipeline
-   ```
-
 ---
 
-## 🛠️ Configuration
+## Configuration
 
 Edit `config/config.yaml`:
 
@@ -120,7 +63,7 @@ reference: "data/reference/genome.fa"
 
 ---
 
-## ▶️ Usage
+## Usage
 
 Run the full pipeline:
 
@@ -140,7 +83,7 @@ snakemake --cores 4
 
 ---
 
-## 📊 Results
+## Results
 
 Outputs live under `results/`:
 
@@ -164,7 +107,7 @@ grep -v '^#' results/variants/sample1.vcf | wc -l
 
 ---
 
-## ✅ Testing
+## Testing
 
 Run unit tests:
 
@@ -176,7 +119,7 @@ Tests stub subprocess calls and verify outputs.
 
 ---
 
-## 🤖 Continuous Integration
+## Continuous Integration
 
 GitHub Actions at `.github/workflows/ci.yml` runs:
 
@@ -187,17 +130,7 @@ Include the badge at the top to show build status.
 
 ---
 
-## 🤝 Contributing
 
-1. Fork & clone  
-2. Create a branch (`git checkout -b feature/foo`)  
-3. Commit (`git commit -am 'Add foo'`)  
-4. Push & PR  
-
-Please add tests for new functionality.
-
----
-
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**. See [LICENSE](LICENSE).
