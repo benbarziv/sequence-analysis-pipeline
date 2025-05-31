@@ -7,7 +7,7 @@ An end-to-end Snakemake workflow for DNA/RNA sequence analysis, from raw FASTQ t
 - **Automated index building** (Bowtie 2)  
 - **Quality control** (FastQC)  
 - **Adapter & quality trimming** (Cutadapt)  
-- **Read alignment** (Bowtie 2 → SAM/BAM)  
+- **Read alignment** (Bowtie 2 -> SAM/BAM)  
 - **BAM sorting & indexing** (SAMtools)  
 - **Variant calling** (FreeBayes)  
 
