@@ -15,13 +15,13 @@ An end-to-end Snakemake workflow for DNA/RNA sequence analysis, from raw FASTQ t
 
 ## Table of Contents
 
-1. [Installation](#installation)  
-2. [Configuration](#configuration)  
-3. [Usage](#usage)  
-4. [Results](#results)  
-5. [Testing](#testing)  
-6. [Continuous Integration](#continuous-integration)  
-7. [License](#license)  
+ [Installation](#installation)  
+ [Configuration](#configuration)  
+ [Usage](#usage)  
+ [Results](#results)  
+ [Testing](#testing)  
+ [Continuous Integration](#continuous-integration)  
+ [License](#license)  
 
 
 ---
